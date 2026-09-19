@@ -1,0 +1,110 @@
+Movie images all must be JPG/JPEG|PNG.
+
+Movie sounds must be AU|MP3 sound format for MOV;
+must be WAV sound format for AVI.
+
+A good speech dict site: freetranslations.org
+
+You can convert to AU with this command:
+/home/muratsivas76/istasyon/java/ffmpeg/bin/ffmpeg.exe -y -vn -i file.mp3 -acodec pcm_mulaw -ac 1 -ar 8000 -ab 64k -f au file.au
+
+You can convert to WAV with this command:
+/home/muratsivas76/istasyon/java/ffmpeg/bin/ffmpeg.exe -i file.mp3 -c:a pcm_s16le -ar 11025 -ac 2 -y file.wav
+
+You can restore your MP3 file with this command:
+/home/muratsivas76/istasyon/java/ffmpeg/bin/ffmpeg.exe -i srcFile.mp3 -ar 24000 -ac 2 -ab 128K -vn -y dstFile.mp3
+
+You can convert from MOV to AVI with this command:
+/home/muratsivas76/istasyon/java/ffmpeg/bin/ffmpeg.exe -i file.mov -q:v 1 -c:v mjpeg -ar 44100 -ac 2 -y file.avi
+
+You can convert from MOV to Facebook accepted MP4 with this command:
+/home/muratsivas76/istasyon/java/ffmpeg/bin/ffmpeg.exe -i file.mov -c:v libx264 -crf 23 -pix_fmt yuv420p -y file.mp4
+
+You can learn MP3 durations of a directory with this command:
+/home/muratsivas76/istasyon/java/ffmpeg/bin/ffprobe.exe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 -sexagesimal file.mp3
+
+You can increment the volume of a file with this command:
+/home/muratsivas76/istasyon/java/ffmpeg/bin/ffmpeg.exe -i file.mp3 -af volume=10dB aumVolumFile.mp3
+
+-----------------
+Example text for generating Quicktime MOV movie (all models are AU-JPG, AU-PNG, MP3-JPG, MP3-PNG):
+SOUND;/home/muratsivas76/istasyon/clases/sounds_images/Ses001.au
+SOUND;/home/muratsivas76/istasyon/clases/sounds_images/Ses002.au
+SOUND;/home/muratsivas76/istasyon/clases/sounds_images/Ses003.au
+SOUND;/home/muratsivas76/istasyon/clases/sounds_images/Ses004.au
+SOUND;/home/muratsivas76/istasyon/clases/sounds_images/Ses005.au
+SOUND;/home/muratsivas76/istasyon/clases/sounds_images/Ses006.au
+IMAGE;/home/muratsivas76/istasyon/clases/sounds_images/merhaba_es_01.jpg:7
+IMAGE;/home/muratsivas76/istasyon/clases/sounds_images/merhaba_es_02.jpg:5
+IMAGE;/home/muratsivas76/istasyon/clases/sounds_images/merhaba_es_03.jpg:3
+
+---------------
+Example text for generating AVI video (all models are WAV-JPG, WAV-PNG) :
+SOUND;/home/muratsivas76/istasyon/clases/sounds_images/Ses01.wav
+SOUND;/home/muratsivas76/istasyon/clases/sounds_images/Ses02.wav
+SOUND;/home/muratsivas76/istasyon/clases/sounds_images/Ses03.wav
+SOUND;/home/muratsivas76/istasyon/clases/sounds_images/Ses04.wav
+SOUND;/home/muratsivas76/istasyon/clases/sounds_images/Ses05.wav
+SOUND;/home/muratsivas76/istasyon/clases/sounds_images/Ses06.wav
+IMAGE;/home/muratsivas76/istasyon/clases/sounds_images/merhaba_es_01.jpg:7
+IMAGE;/home/muratsivas76/istasyon/clases/sounds_images/merhaba_es_02.jpg:5
+IMAGE;/home/muratsivas76/istasyon/clases/sounds_images/merhaba_es_03.jpg:3
+
+-----------------
+To Latin Convert info:
+---
+AAAAAA --> Ã
+OOOOOO --> Õ
+aaaaaa --> ã
+oooooo --> õ
+
+AAAAA --> Â
+İİİİİ --> Î
+UUUUU --> Û
+EEEEE --> Ê
+OOOOO --> Ô
+aaaaa --> â
+eeeee --> ê
+iiiii --> î
+ooooo --> ô
+uuuuu --> û
+
+AAAA --> À
+EEEE --> È
+İİİİ --> Ì
+IIII --> Ì
+OOOO --> Ò
+UUUU --> Ù
+aaaa --> à
+eeee --> è
+iiii --> ì
+oooo --> ò
+uuuu --> ù
+
+AAA --> Á
+EEE --> É
+III --> Í
+OOO --> Ó
+UUU --> Ú
+NNN --> Ñ
+/?\?\? --> ¿
+!!! --> ¡
+aaa --> á
+eee --> é
+iii --> í
+ooo --> ó
+uuu --> ú
+nnn --> ñ
+
+ccc --> ç
+sss --> ş
+kikiki --> ı
+ggg --> ğ
+kokoko --> ö
+kukuku --> ü
+CCC --> Ç
+SSS --> Ş
+bibibi --> İ
+GGG --> Ğ
+bobobo --> Ö
+bububu --> Ü

@@ -1,0 +1,28 @@
+Windows:
+PRE-INFO for Fast File Getting:
+1: c:\Users\muratsivas76\istasyon\java\poppler-24.08.0\Library\bin\pdftotext.exe -layout -enc UTF-8 -eol dos -nopgbrk ytest.pdf ytest.txt
+
+2: Open ytest.txt in Notdefteri and edit then save it in ISO-8859-9 charcode.
+
+3: move /y ytest.txt test.txt
+----
+1: Revisir customInfo.dat (For Line Float Help: (java -cp cls; CuentaLinef))
+
+2: java -cp cls; GenerateSH customInfo.dat
+
+3: .\auto.bat
+
+4: .\auto2.bat
+########
+Linux
+PRE-INFO for Fast File Getting:
+1: /opt/poppler0350/bin/pdftotext -layout -enc UTF-8 -eol unix -nopgbrk ytest.pdf ytest.txt
+Alternative only "pdftotext26"
+
+2: java -cp cls: V2UTFToISO ytest.txt test.txt
+----
+1: Revisir customInfo.dat (For Line Float Help; (java -cp cls: CuentaLinef))
+
+2: java -cp cls: LinGenerateSH customInfo.dat
+
+3: ./linauto.sh

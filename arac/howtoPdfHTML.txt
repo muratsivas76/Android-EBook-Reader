@@ -1,0 +1,11 @@
+Example GUIDE:
+1-  /opt/poppler/bin/pdftohtml -c -i -noframes -enc UTF-8 -nomerge file.pdf xfile.html
+2-  java GetFT xfile.html ztv.txt [java -cp cproje: GetFT xfile.html ztv.txt]
+3-  java FTDevam xfile.html zsil.html ft0 ft1 ft2... [java -cp proje: FTDevam file.html zsil.html ft0 ft1 ft2...] OR [java -cp cproje/: FTSil xfile.html zsil.html ft0 ft13]
+4-  mv -fv zsil.html file.html
+5-  java SadeleHTML file.html zsil.html  [java -cp cproje: SadeleHTML file.html zsil.html]
+6-  java PurifyPoppler zsil.html dest.txt  [java -cp cproje: PurifyPoppler zsil.html dest.txt]
+7-  java -jar /home/muratsivas76/istasyon/jclass/notdefteri_eylul_2020.jar &
+8-  Open dest.txt; edit and "beauty text 2"; replaceAll/eliminate FOOTNOTE:; and convert to HTML for example with dst prefix. This will produce islem/dst.html
+9-  mv -fv islem/dst.html .
+10- java -jar /home/muratsivas76/istasyon/jclass/htmltopdf_140418.jar -f dst.html dst.pdf -p ../../infos/yoli.prop

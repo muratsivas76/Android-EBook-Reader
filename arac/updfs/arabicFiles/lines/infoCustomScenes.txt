@@ -1,0 +1,114 @@
+You can create your own scenes on this interface:
+############
+package net.murat.iface;
+
+public interface Scene
+{
+   public void step (int w, int h);
+   public void render (int w, int h, java.awt.Graphics2D g2d);
+   public int getSleepTime ();
+   public boolean isEnd ();
+}
+############
+
+Example implementation:
+#######################
+package net.murat.iface;
+
+import java.awt.*;
+
+public class CortinaScene
+extends Object
+implements java.io.Serializable, Scene
+{
+  
+  private Color FG;
+  private Color FF;
+  final private Color BG=Color.white;
+  
+  private GradientPaint GP;
+  
+  private boolean ended = false;
+    
+  private int sleepTime=32;
+  
+  private int syc=0;
+  
+  public CortinaScene ()
+  {
+    super ();
+    
+    FG = Color.RED;
+    FF = Color.BLUE;
+    
+    GP = new GradientPaint (111, 111, FG, 333, 333, FF, true);
+  }
+  
+  public void step (int w, int h)
+  {
+    ++syc;
+    
+    if (syc > 8)
+    {
+      ended = true;
+    }
+    
+    return;
+  }
+  
+  public void render (int width, int height, Graphics2D g2d)
+  {
+    g2d.setBackground (BG);
+    g2d.clearRect (0, 0, width, height);
+    
+    g2d.setPaint (GP);
+    
+    g2d.fillRect ((width)-((width/8)*syc), 0x0, ((width/8)*syc), height);
+    
+    return;
+  }
+  
+  public int getSleepTime ()
+  {
+    return sleepTime;
+  }
+  
+  public boolean isEnd ()
+  {
+    return ended;
+  }
+  
+  public String toString ()
+  {
+    return "Cortina Scene";
+  }
+  
+}//end class
+#######################
+Important:
+1- CortinaScene's package is "net.murat.iface".
+2- It implements "Scene" of "net.murat.iface".
+3- Example "Scene.class" exists in jar directory: "arabicFolder\net\murat\iface".
+4- CortinaScene has only one constructor without arguments. Therefore we will
+use "newInstance ()". Who wants to use argumented constructors, can develop app
+according this example:
+
+(obj.getClass ()).getDeclaredConstructor (String.class).newInstance ("MyString");
+
+We suppose that our Scene implementation is CortinaScene and its java file
+exists in ..\arac\xsrc\net\murat\iface directory.
+
+Then we pass to ..\arac folder and give this command:
+
+javac -source 1.8 -target 1.8 -sourcepath xsrc; -cp ..\bin\arabicFiles; -g:none -proc:none -nowarn -O -d ..\bin\arabicFiles xsrc\net\murat\iface\CortinaScene.java
+
+This command will create "CortinaScene.class" in "arabicFolder\net\murat\iface" directory.
+
+Then you call "Animation" menuitem in keyboard app and enter name of class like this:
+net.murat.iface.CortinaScene
+
+You per line can add other custom scenes too.
+
+Greetings!
+
+-&-

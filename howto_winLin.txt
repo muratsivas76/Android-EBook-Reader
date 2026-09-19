@@ -1,0 +1,16 @@
+İşlem Sırası:
+
+1. kstore bat dosyası çalıştırılır. Keystore silinmediği sürece bu dosyanın 
+tekrar çalıştırılmasına gerek yoktur.
+
+2. make1app bat dosyası çalıştırılır.
+
+3. make2app bat dosyası çalıştırılır.
+
+####
+Linux:
+
+1. kstore sh dosyası çalıştırılır. Keystore silinmediği sürece bu dosyanın 
+tekrar çalıştırılmasına gerek yoktur.
+
+2. make sh dosyası çalıştırılır.

@@ -1,0 +1,402 @@
+Image
+{
+	width:		640				:
+	height:		480				:
+	type:		1				:1=type_int_rgb
+}
+
+Camera
+{
+	pointX:		0				:double
+	pointY:		0				:double
+	pointZ:		130				:double
+	~
+	vectorX:	0.70			:double
+	vectorY:	0				:double
+	vectorZ:	-0.70			:double
+	~
+	focal:		1.8				:double
+	scrWidth:	2				:double
+	scrHeight:	1.5				:double
+}
+
+World
+{
+	volume:		1				:double
+	depth:		4				:int
+	~
+	bgRed:		0.4				:double
+	bgGreen:	0.6				:double
+	bgBlue:		1.0				:double
+	~
+	ambientRed:	0.3				:double
+	ambientGreen:	0.3			:double
+	ambientBlue:	0.3			:double
+}
+
+OBJECTS-LIGHTS:
+
+Intersection
+{
+	Plane
+	{
+		volume:		0				:double
+		isDamier:	true			:true OR false
+		~
+		point:		0,0,0			:double,double,double
+		vector:		0,0,1			:double,double,double
+		~
+		ns:		1					:int
+		nt:		1					:int
+		~
+		step:	10			:double
+		x0:		10			:double
+		y0:		0			:double
+		~
+		k1:		0xFF0000		:d,d,d OR 0xval
+		k2:		0x0000ff		:d,d,d OR 0xval
+		k3:		0x000000		:d,d,d OR 0xval
+		k4:		0x000000		:d,d,d OR 0xval
+		k5:		0x000000		:d,d,d OR 0xval
+	}
+
+	Cylinder
+	{
+		volume:		0				:double
+		isDamier:	false			:true OR false
+		~
+		vector:		0,0,1			:double,double,double; dir
+		point:		150,50,20		:double,double,double; z,x,y;origin
+		radius:		35				:double
+		~
+		ns:		100					:int
+		nt:		10					:int
+		~
+		step:	0			:double
+		x0:		0			:double
+		y0:		0			:double
+		~
+		k1:		0.08, 0.32, 0.08	:d,d,d OR 0xval
+		k2:		0.2, 0.2, 0.2		:d,d,d OR 0xval
+		k3:		0.2, 0.2, 0.2		:d,d,d OR 0xval
+		k4:		0x000000			:d,d,d OR 0xval
+		k5:		0x000000			:d,d,d OR 0xval
+	}
+
+	END
+
+}
+
+Intersection
+{
+	Plane
+	{
+		volume:		0				:double
+		isDamier:	true			:true OR false
+		~
+		point:		0,0,-100		:double,double,double
+		vector:		0,0,1			:double,double,double
+		~
+		ns:		1					:int
+		nt:		1					:int
+		~
+		step:	50			:double
+		x0:		30			:double
+		y0:		0			:double
+		~
+		k1:		0.15, 0.36, 0.6	:d,d,d OR 0xval
+		k2:		1, 1, 1			:d,d,d OR 0xval
+		k3:		0x000000		:d,d,d OR 0xval
+		k4:		0x000000		:d,d,d OR 0xval
+		k5:		0, 0, 0			:d,d,d OR 0xval
+	}
+
+	END
+
+}
+
+Intersection
+{
+	Plane
+	{
+		volume:		0				:double
+		isDamier:	true			:true OR false
+		~
+		point:		0,0,0			:double,double,double
+		vector:		0,0,1			:double,double,double
+		~
+		ns:		1					:int
+		nt:		1					:int
+		~
+		step:	10			:double
+		x0:		10			:double
+		y0:		0			:double
+		~
+		k1:		0xFFFFFF		:d,d,d OR 0xval
+		k2:		0x000000		:d,d,d OR 0xval
+		k3:		0x000000		:d,d,d OR 0xval
+		k4:		0x000000		:d,d,d OR 0xval
+		k5:		0x000000		:d,d,d OR 0xval
+	}
+
+	Cylinder
+	{
+		volume:		0				:double
+		isDamier:	false			:true OR false
+		~
+		vector:		0,0,1			:double,double,double; dir
+		point:		150,-50,20		:double,double,double; z,x,y;origin
+		radius:		40				:double
+		~
+		ns:		100					:int
+		nt:		0					:int
+		~
+		step:	0			:double
+		x0:		0			:double
+		y0:		0			:double
+		~
+		k1:		0.08, 0.32, 0.08	:d,d,d OR 0xval
+		k2:		0.2, 0.2, 0.2		:d,d,d OR 0xval
+		k3:		0.2, 0.2, 0.2		:d,d,d OR 0xval
+		k4:		0x000000			:d,d,d OR 0xval
+		k5:		0x000000			:d,d,d OR 0xval
+	}
+
+	END
+
+}
+
+Basic
+{
+	Sphere
+	{
+		volume:		1.5				:double
+		isDamier:	true			:true OR false
+		~
+		point:		150,-50,30		:double,double,double
+		radius:		20				:double,double,double
+		~
+		ns:		50					:int
+		nt:		10					:int
+		~
+		step:	10			:double
+		x0:		10			:double
+		y0:		0			:double
+		~
+		k1:		0xff0000		:d,d,d OR 0xval
+		k2:		0x0000ff		:d,d,d OR 0xval
+		k3:		0x00dd00		:d,d,d OR 0xval
+		k4:		0x0d0d0d		:d,d,d OR 0xval
+		k5:		0xffffff		:d,d,d OR 0xval
+	}
+
+	END
+
+}
+
+Intersection
+{
+	Plane
+	{
+		volume:		1.5				:double
+		isDamier:	false			:true OR false
+		~
+		point:		150,50,45		:double,double,double
+		vector:		0,0,1			:double,double,double
+		~
+		ns:		0					:int
+		nt:		0					:int
+		~
+		step:	0			:double
+		x0:		0			:double
+		y0:		0			:double
+		~
+		k1:		0x000000		:d,d,d OR 0xval
+		k2:		0x00DD00		:d,d,d OR 0xval
+		k3:		0x000000		:d,d,d OR 0xval
+		k4:		0x000000		:d,d,d OR 0xval
+		k5:		0x000000		:d,d,d OR 0xval
+	}
+
+	Plane
+	{
+		volume:		1.5				:double
+		isDamier:	false			:true OR false
+		~
+		point:		150,50,15		:double,double,double
+		vector:		0,0,-1			:double,double,double
+		~
+		ns:		0					:int
+		nt:		0					:int
+		~
+		step:	0			:double
+		x0:		0			:double
+		y0:		0			:double
+		~
+		k1:		0x000000		:d,d,d OR 0xval
+		k2:		0x00DD00		:d,d,d OR 0xval
+		k3:		0x000000		:d,d,d OR 0xval
+		k4:		0x000000		:d,d,d OR 0xval
+		k5:		0x000000		:d,d,d OR 0xval
+	}
+
+	Plane
+	{
+		volume:		1.5				:double
+		isDamier:	false			:true OR false
+		~
+		point:		150,35,30		:double,double,double
+		vector:		0,-1,0			:double,double,double
+		~
+		ns:		50					:int
+		nt:		10					:int
+		~
+		step:	0			:double
+		x0:		0			:double
+		y0:		0			:double
+		~
+		k1:		0xff0000		:d,d,d OR 0xval
+		k2:		0xffffff		:d,d,d OR 0xval
+		k3:		0x000000		:d,d,d OR 0xval
+		k4:		0x000000		:d,d,d OR 0xval
+		k5:		0x000000		:d,d,d OR 0xval
+	}
+
+	Plane
+	{
+		volume:		1.5				:double
+		isDamier:	false			:true OR false
+		~
+		point:		150,65,30		:double,double,double
+		vector:		0,1,0			:double,double,double
+		~
+		ns:		0					:int
+		nt:		0					:int
+		~
+		step:	0			:double
+		x0:		0			:double
+		y0:		0			:double
+		~
+		k1:		0xff0000		:d,d,d OR 0xval
+		k2:		0x00ff00		:d,d,d OR 0xval
+		k3:		0x000000		:d,d,d OR 0xval
+		k4:		0x000000		:d,d,d OR 0xval
+		k5:		0x000000		:d,d,d OR 0xval
+	}
+
+	Plane
+	{
+		volume:		1.5				:double
+		isDamier:	false			:true OR false
+		~
+		point:		135,50,30		:double,double,double
+		vector:		-1,0,0			:double,double,double
+		~
+		ns:		0				:int
+		nt:		0				:int
+		~
+		step:	0			:double
+		x0:		0			:double
+		y0:		0			:double
+		~
+		k1:		0xff0000		:d,d,d OR 0xval
+		k2:		0x00ff00		:d,d,d OR 0xval
+		k3:		0x000000		:d,d,d OR 0xval
+		k4:		0x000000		:d,d,d OR 0xval
+		k5:		0x000000		:d,d,d OR 0xval
+	}
+
+	Plane
+	{
+		volume:		1.5				:double
+		isDamier:	false			:true OR false
+		~
+		point:		165,50,30		:double,double,double
+		vector:		1,0,0			:double,double,double
+		~
+		ns:		0					:int
+		nt:		0					:int
+		~
+		step:	0			:double
+		x0:		0			:double
+		y0:		0			:double
+		~
+		k1:		0xff0000		:d,d,d OR 0xval
+		k2:		0x00ff00		:d,d,d OR 0xval
+		k3:		0xdd0000		:d,d,d OR 0xval
+		k4:		0x00dd00		:d,d,d OR 0xval
+		k5:		0x000000		:d,d,d OR 0xval
+	}
+
+	END
+
+}
+
+//Basic OR Intersection OR Union
+Basic
+{
+
+	Cone
+	{
+		volume:		1.5				:double
+		isDamier:	true			:true OR false
+~
+		vector:		0, 0, 1				:double,double,double; dir
+		point:		150,0,20				:double,double,double; z,x,y
+		angle:		0.27				:double
+~
+		ns:		1				:int
+		nt:		1				:int
+~
+		step:		10				:double
+		x0:		0				:double
+		y0:		0				:double
+~
+		k1:		0xff0000				:d,d,d OR 0xval
+		k2:		0x0000ff				:d,d,d OR 0xval
+		k3:		0x000000				:d,d,d OR 0xval
+		k4:		0x000000				:d,d,d OR 0xval
+		k5:		0x000000				:d,d,d OR 0xval
+	}
+
+	//XTorus
+	{
+		volume:		1				:double
+		isDamier:	true			:true OR false
+~
+		point:		0,0,0				:origin
+		vector:		0,1,0				:direction//if MTorus does not exist this line
+		radius-1:		172				:double
+		radius-2:		111				:double
+~
+		ns:		1				:int
+		nt:		1				:int
+~
+		step:		25				:double
+		x0:		1				:double
+		y0:		1				:double
+~
+		k1:		0xff0000				:d,d,d OR 0xval
+		k2:		0x00dd00				:d,d,d OR 0xval
+		k3:		0x000000				:d,d,d OR 0xval
+		k4:		0x000000				:d,d,d OR 0xval
+		k5:		0x000000				:d,d,d OR 0xval
+	}
+
+	END
+
+}
+
+DirectionalLightSource
+{
+	vector:		1,0,-0.5			:double, double, double
+	rgb:		0xffffff			:d,d,d OR 0xval
+}
+
+//PointLightSource
+{
+	vector:		1,0,-0.5			:double, double, double
+	rgb:		0xffffff			:d,d,d OR 0xval
+}
+
+######### FINISH #######

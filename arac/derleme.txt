@@ -1,0 +1,4 @@
+javac -source 1.6 -target 1.6 -sourcepath source; -cp cls; -g:none -proc:none -nowarn -O source\*.java -d cls
+
+Linux:
+javac -source 1.8 -target 1.8 -sourcepath source -cp cls:guijtracer.jar -g:none -proc:none -nowarn -O -d cls source/*.java

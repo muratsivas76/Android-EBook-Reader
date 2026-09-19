@@ -1,0 +1,61 @@
+Java Public API & Member Extractor Report
+Generated on: 2026-06-12T23:30:00.455646702
+------------------------------------------
+
+--- File: ../src/net/murat/ebook/EBook.java ---
+[PUBLİC METHOD] onCreate(Bundle paramBundle)
+[PROTECTED METHOD] onStop(empty)
+[PROTECTED METHOD] onResume(empty)
+[PROTECTED METHOD] onPause(empty)
+[PROTECTED METHOD] onDestroy(empty)
+[PUBLİC METHOD] run(empty)
+
+--- File: ../src/net/murat/ebook/ScenePanel.java ---
+[CONSTRUCTOR] ScenePanel(Context contxt)
+[PUBLİC METHOD] onClick(DialogInterface dialog, int wh)
+[PUBLİC METHOD] onClick(DialogInterface dialog, int which)
+[PUBLİC METHOD] init(empty)
+[PUBLİC METHOD] cinit(String text)
+[PUBLİC METHOD] renderAlign(int xwidth, int xheight, Canvas canvas)
+[PUBLİC METHOD] onTouchEvent(MotionEvent evt)
+[PUBLİC METHOD] surfaceChanged(SurfaceHolder holder, int format, int width, int height)
+[PUBLİC METHOD] surfaceCreated(SurfaceHolder holder)
+[PUBLİC METHOD] surfaceDestroyed(SurfaceHolder holder)
+
+--- File: ../src/net/murat/ebook/Adding.java ---
+[CONSTRUCTOR] Adding(empty)
+[PUBLİC METHOD] addAll(empty)
+
+--- File: ../src/net/murat/ebook/R.java ---
+[FIELD] ebooklogo
+[FIELD] program_name
+
+--- File: ../src/net/murat/sayfas/Sayfa_00001.java ---
+[CONSTRUCTOR] Sayfa_00001(empty)
+[PUBLİC METHOD] toString(empty)
+
+--- File: ../src/net/murat/sayfas/Sayfa_00005.java ---
+[CONSTRUCTOR] Sayfa_00005(empty)
+
+--- File: ../src/net/murat/sayfas/Sayfa_00002.java ---
+[CONSTRUCTOR] Sayfa_00002(empty)
+
+--- File: ../src/net/murat/sayfas/Sayfa_00004.java ---
+[CONSTRUCTOR] Sayfa_00004(empty)
+
+--- File: ../src/net/murat/sayfas/AInfos.java ---
+[FIELD] SAYFALAR
+[FIELD] SAYFALEN
+[CONSTRUCTOR] AInfos(empty)
+[PUBLİC METHOD] addSayfa(ASayfa sf)
+[PUBLİC METHOD] generate(empty)
+
+--- File: ../src/net/murat/sayfas/Sayfa_00003.java ---
+[CONSTRUCTOR] Sayfa_00003(empty)
+
+--- File: ../src/net/murat/sayfas/ASayfa_00000.java ---
+[CONSTRUCTOR] ASayfa_00000(empty)
+
+--- File: ../src/net/murat/sayfas/ASayfa.java ---
+[FIELD] NL
+[FIELD] CERO

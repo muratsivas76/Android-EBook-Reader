@@ -1,0 +1,4 @@
+SOUND;arabicFiles/sounds/blue.au
+SOUND;arabicFiles/sounds/red.au
+IMAGE;arabicFiles/images/blue.jpg:30
+IMAGE;arabicFiles/images/red.jpg:10

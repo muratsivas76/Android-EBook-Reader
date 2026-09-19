@@ -1,0 +1,45 @@
+test.txt; File Name
+ISO-8859-9; Char Code
+11; Line Count
+2100F; Line Float Length
+SansSerif,0,64; Font (must be same as above font information)
+no; ALIGN-MDK (yes/no)
+landscape; orientation (portrait | landscape)
+/////////////
+landscape; orientation (portrait | landscape)
+ISO-8859-9; Char Code
+Sans_Serif; Font Name (Monospace/Monospaced, Serif, Sans_Serif/SansSerif)
+0; Font style (0, 1, 2, 3)(plain, bold, italic, boldItalic)
+64F; Text size
+#FFFFC0CB; BG color (alpha_red_green_blue)
+#FF000000; FG color (alpha_red_green_blue)
+30F; xcoord
+88F; ycoord
+91F; space
+2F; graphics stroke valor
+yes; ALIGN-SCREEN (yes/no [yes signify centered])
+rect-16F-18F-#FFEF8888; rect info (alt is, roundrect-6F-12F-20F-20F-#DDFF00FF)
+#################
+Original Optimal File is Above:
+test.txt; File Name
+ISO-8859-9; Char Code
+11; Line Count
+2100F; Line Float Length
+SansSerif,0,64; Font (must be same as above font information)
+no; ALIGN-MDK (yes/no)
+landscape; orientation (portrait | landscape)
+/////////////
+landscape; orientation (portrait | landscape)
+ISO-8859-9; Char Code
+Sans_Serif; Font Name (Monospace/Monospaced, Serif, Sans_Serif/SansSerif)
+0; Font style (0, 1, 2, 3)(plain, bold, italic, boldItalic)
+64F; Text size
+#FFFFC0CB; BG color (alpha_red_green_blue)
+#FF000000; FG color (alpha_red_green_blue)
+30F; xcoord
+88F; ycoord
+91F; space
+2F; graphics stroke valor
+yes; ALIGN-SCREEN (yes/no [yes signify centered])
+rect-16F-18F-#FFEF8888; rect info (alt is, roundrect-6F-12F-20F-20F-#DDFF00FF)
+#################

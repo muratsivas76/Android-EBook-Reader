@@ -1,0 +1,80 @@
+Image
+{
+	width:		800				:
+	height:		600				:
+	type:		1				:1=type_int_rgb
+}
+
+Camera
+{
+	pointX:		0				:double
+	pointY:		0				:double
+	pointZ:		130				:double
+	~
+	vectorX:	0.70			:double
+	vectorY:	0				:double
+	vectorZ:	-0.90			:double
+	~
+	focal:		1.7				:double
+	scrWidth:	2				:double
+	scrHeight:	1.5				:double
+}
+
+World
+{
+	volume:		1				:double
+	depth:			2			:int
+	~
+	bgRed:			0.8			:double
+	bgGreen:		0.8			:double
+	bgBlue:			1.0			:double
+	~
+	ambientRed:		0.3			:double
+	ambientGreen:	0.3			:double
+	ambientBlue:	0.73		:double
+}
+
+OBJECTS-LIGHTS:
+
+//Basic, Union or Intersection
+Basic
+{
+	Plane
+	{
+		volume:		0				:double
+		isDamier:	true			:true OR false
+		~
+		point:		0,0,-100		:double,double,double
+		vector:		0,0,1			:double,double,double
+		~
+		ns:			10				:int
+		nt:			1				:int
+		~
+		step:		55				:double
+		x0:			28				:double
+		y0:			0				:double
+		~
+		k1:			0.09, 0.09, 0.09	:d,d,d OR 0xval
+		k2:			0.99, 0.99, 0.99	:d,d,d OR 0xval
+		k3:			0x000000			:d,d,d OR 0xval
+		k4:			0x000000			:d,d,d OR 0xval
+		k5:			0, 0, 0				:d,d,d OR 0xval
+	}
+
+	END
+
+}
+
+//PointLightSource
+{
+	vector:		1,0,-0.5			:double, double, double
+	rgb:		0xffffff			:d,d,d OR 0xval
+}
+
+DirectionalLightSource
+{
+	vector:		1,0,-0.5			:double, double, double
+	rgb:		0xffffff			:d,d,d OR 0xval
+}
+
+######### FINISH #######
