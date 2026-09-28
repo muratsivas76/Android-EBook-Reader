@@ -1,0 +1,7 @@
+/home/muratsivas76/istasyon/windows_proje_android/Xodo/imlec_metin_xodo/
+
+If there is problem, remove tori folder contents. And copy all contents of folder above (imlec_metin_xodo) to tori.
+
+OR 
+Easy way:
+Take original files from origFolder.

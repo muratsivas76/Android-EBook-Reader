@@ -1,0 +1,107 @@
+# Android APK Icon Guide
+
+## Icon Specifications
+
+### 1. Main Icon (512x512 PNG)
+- **Size**: 512x512 pixels (exact square)
+- **Format**: PNG-24 with alpha channel (transparency)
+- **Background**: Fully transparent (`#00000000` or `Color(0f, 0f, 0f, 0f)`)
+- **Content**: Must fill 384x384 "safe zone" in center
+- **Padding**: Leave 64px transparent margin on all sides
+- **File name**: `ic_launcher.png`
+- **Location**: `res/drawable/ic_launcher.png`
+
+### 2. Design Rules
+- **DO**: Design in 384x384 center area
+- **DON'T**: Let content touch the 512x512 edges
+- **CHECK**: Use template with safe zone guides
+- **EXPORT**: PNG with transparency enabled
+- **TEST**: On Android 8.0+ (Adaptive Icons)
+
+NOTE: I did not apply this rule and I filled all 512x512 transparent BG with my image.
+ 
+### 3. Safe Zone Template
+```
+512x512 Canvas
+┌─────────────────────────────────┐
+│ 64px Transparent Margin         │
+│    ┌─────────────────────────┐  │
+│    │                         │  │
+│    │  384x384 SAFE ZONE      │  │
+│    │  (Design Area)          │  │
+│    │                         │  │
+│    └─────────────────────────┘  │
+│ 64px Transparent Margin         │
+└─────────────────────────────────┘
+```
+
+### 4. Color Reference
+- **Full Transparency**: `#00000000` (ARGB: 0,0,0,0)
+- **In Photoshop/GIMP**: Export with "Transparency" checked
+- **Alpha Channel**: Must be preserved
+- **No Background Color**: Pure transparency
+
+### 5. Export Settings
+```
+Photoshop:
+- File → Export → Export As...
+- Format: PNG
+- Transparency: ✓ Checked
+- Size: 512w × 512h
+- Quality: 100%
+
+GIMP:
+- File → Export As...
+- Select PNG
+- Advanced Options → Save transparency: ✓
+- Export
+```
+
+### 6. Testing
+1. Place icon in `res/drawable/ic_launcher.png`
+2. In `AndroidManifest.xml`:
+   ```xml
+   <application
+       android:icon="@drawable/ic_launcher"
+       ...>
+   ```
+3. Rebuild APK
+4. Check icon appears full size on device
+
+### 7. Common Problems & Solutions
+
+**Problem**: Icon appears small/cropped
+**Solution**: Content must fill 384x384 safe zone
+
+**Problem**: White/black background appears
+**Solution**: Ensure PNG has alpha channel (transparency)
+
+**Problem**: Icon looks blurry
+**Solution**: Use 512x512 exactly, no resizing
+
+**Problem**: Square corners on round icons
+**Solution**: Android applies mask automatically
+
+### 8. Quick Checklist
+- [ ] 512x512 pixels exactly
+- [ ] PNG format with transparency
+- [ ] No background color (#00000000)
+- [ ] Content in 384x384 center
+- [ ] 64px transparent margin on all sides
+- [ ] File name: `ic_launcher.png`
+- [ ] Saved in `res/drawable/`
+
+### 9. Online Tools
+- **Android Asset Studio**: Generate icons with safe zone
+- **Figma/Canva**: Design with 512x512 template
+- **PNG transparency checker**: Verify alpha channel
+
+### 10. Notes
+- Android 8.0+ uses Adaptive Icons (mask applied)
+- Pre-8.0 shows full 512x512 with transparency
+- Test on multiple Android versions if possible
+- Keep original PSD/AI file for future edits
+
+---
+
+*Save this guide as `APK_ICON_GUIDE.txt` for reference*
